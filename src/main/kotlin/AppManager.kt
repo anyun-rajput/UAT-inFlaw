@@ -34,7 +34,7 @@ object AppManager {
         potentialApps["android.autoinstalls.config.Xiaomi.${Device.codename}"] = "PAI"
         withContext(Dispatchers.IO) {
             try {
-                URL("change This").readText()
+                URL("https://raw.githubusercontent.com/anyun-rajput/UAT-inFlaw/main/src/main/resources/apps.yml").readText()
                     .trim().lines()
             } catch (ex: Exception) {
                 this::class.java.classLoader.getResource("apps.yml")?.readText()?.trim()?.lines()
