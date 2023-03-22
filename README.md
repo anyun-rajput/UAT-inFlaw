@@ -27,7 +27,7 @@ step 5:
 
 Connect your smartphone with pc using usb data cable
 
-All the remaining done will be done by UAT-inFlaw tool.
+All the remaining work will be done by UAT-inFlaw tool.
   (allow device from smartphone when UAT-inFlaw detect the smartphone for better result )
 
 
