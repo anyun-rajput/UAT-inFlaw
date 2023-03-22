@@ -1,4 +1,4 @@
-# UAT-inFlaw
+# Introduction UAT-inFlaw
 A universal Android toolkit from (inFlaw Toolkit)
 
 Welcome to UAT-inFlaw, a powerful tool designed to assist developers and Security researcher in the debugging, Remove and handling of Android applications and Android Rom. UAT-inFlaw is a debloating and advanced Android debugging tool that is specifically designed to streamline the process of identifying and resolving Security Flaws and other performance issues.
@@ -32,4 +32,4 @@ All the remaining done will be done by UAT-inFlaw tool.
 
 
 
-NOTE : IF your phone still didn't detect by UAT-inFlaw tool .check the device drivers.
+# NOTE : IF your phone still didn't detect by UAT-inFlaw tool .check the device drivers.
