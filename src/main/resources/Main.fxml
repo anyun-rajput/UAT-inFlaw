@@ -31,7 +31,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-radius: 100;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-radius: 100;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="MainController">
    <children>
       <BorderPane prefHeight="730.0" prefWidth="1200.0" style="-fx-background-color: E5FDD1;">
          <center>
@@ -39,7 +39,7 @@
                <children>
                   <HBox prefHeight="23.0" prefWidth="1200.0">
                      <children>
-                        <MenuBar prefHeight="58.0" prefWidth="1110.0" stylesheets="@main.css">
+                        <MenuBar fx:id="Topbar" onMouseClicked="#borderpane_pressed" onMouseDragged="#borderpane_dragged" prefHeight="58.0" prefWidth="1110.0" stylesheets="@main.css">
                            <menus>
                               <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
                                  <items>
@@ -828,7 +828,7 @@
                                           <Line endX="-100.41424560546875" endY="31.29290008544922" startX="-100.0" stroke="#b5f1cc" strokeWidth="5.0" />
                                           <MFXProgressBar fx:id="progressBar" prefHeight="9.0" prefWidth="252.0">
                                              <HBox.margin>
-                                                <Insets top="15.0" />
+                                                <Insets right="5.0" top="15.0" />
                                              </HBox.margin>
                                           </MFXProgressBar>
                                           <MFXProgressSpinner fx:id="progressIndicator" prefHeight="32.0" prefWidth="24.0" />
