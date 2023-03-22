@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <BorderPane prefHeight="730.0" prefWidth="1200.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar stylesheets="@main.css">
+                     <menus>
+                        <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
+                           <items>
+                              <MenuItem fx:id="reloadMenuItem" disable="true" mnemonicParsing="false" onAction="#reloadMenuItemPressed" text="Reload device" />
+                              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMenuItemPressed" text="About" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="deviceMenu" disable="true" mnemonicParsing="false" text="Device">
+                           <items>
+                              <Menu fx:id="rebootMenu" mnemonicParsing="false" text="Reboot to">
+                                 <items>
+                                    <MenuItem fx:id="systemMenuItem" mnemonicParsing="false" onAction="#systemMenuItemPressed" text="System" />
+                                    <MenuItem fx:id="recoveryMenuItem" mnemonicParsing="false" onAction="#recoveryMenuItemPressed" text="Recovery" />
+                                    <MenuItem fx:id="fastbootMenuItem" mnemonicParsing="false" onAction="#fastbootMenuItemPressed" text="Fastboot" />
+                                    <MenuItem fx:id="edlMenuItem" mnemonicParsing="false" onAction="#edlMenuItemPressed" text="EDL" />
+                                 </items>
+                              </Menu>
+                              <MenuItem fx:id="readPropertiesMenuItem" mnemonicParsing="false" onAction="#readPropertiesMenuItemPressed" text="Read properties" />
+                              <MenuItem fx:id="savePropertiesMenuItem" mnemonicParsing="false" onAction="#savePropertiesMenuItemPressed" text="Save properties" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="appManagerMenu" disable="true" mnemonicParsing="false" text="App Manager">
+                           <items>
+                              <CheckMenuItem fx:id="secondSpaceButton" mnemonicParsing="false" onAction="#secondSpaceButtonPressed" text="Second Space" />
+                              <MenuItem fx:id="addAppsButton" mnemonicParsing="false" onAction="#addAppsButtonPressed" text="Add apps" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <HBox prefHeight="701.0" prefWidth="1200.0">
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <left>
+                              <TabPane fx:id="tabPane" prefHeight="694.0" prefWidth="910.0" stylesheets="@main.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                 <tabs>
+                                    <Tab id="uppertab" fx:id="adbTab" closable="false" text="ADB">
+                                       <content>
+                                          <AnchorPane>
+                                             <children>
+                                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                                   <left>
+                                                      <TabPane fx:id="appManagerPane" disable="true" prefHeight="666.0" prefWidth="606.0" styleClass="tab-pane2" stylesheets="@main.css" BorderPane.alignment="CENTER">
+                                                         <tabs>
+                                                            <Tab fx:id="uninstallerTab" closable="false" text="Uninstaller">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                                     <children>
+                                                                        <GridPane hgap="8.0" layoutX="111.0" layoutY="106.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints vgrow="ALWAYS" />
+                                                                              <RowConstraints />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TableView fx:id="uninstallerTableView" editable="true">
+                                                                                 <columns>
+                                                                                    <TableColumn fx:id="uncheckTableColumn" prefWidth="35.0" />
+                                                                                    <TableColumn fx:id="unappTableColumn" editable="false" prefWidth="205.0" text="App name" />
+                                                                                    <TableColumn fx:id="unpackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
+                                                                                 </columns>
+                                                                              </TableView>
+                                                                              <Button fx:id="uninstallButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#uninstallButtonPressed" style="-fx-background-color: #f75575;" stylesheets="@testApplication.css" text="Uninstall !" textFill="WHITE" GridPane.rowIndex="1">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                            <Tab fx:id="reinstallerTab" closable="false" text="Reinstaller">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                                     <children>
+                                                                        <GridPane hgap="8.0" layoutX="111.0" layoutY="106.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints vgrow="ALWAYS" />
+                                                                              <RowConstraints />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TableView fx:id="reinstallerTableView" editable="true">
+                                                                                 <columns>
+                                                                                    <TableColumn fx:id="recheckTableColumn" prefWidth="35.0" />
+                                                                                    <TableColumn fx:id="reappTableColumn" editable="false" prefWidth="205.0" text="App name" />
+                                                                                    <TableColumn fx:id="repackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
+                                                                                 </columns>
+                                                                              </TableView>
+                                                                              <Button fx:id="reinstallButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reinstallButtonPressed" style="-fx-background-color: #25c161;" text="Reinstall !" textFill="WHITE" GridPane.rowIndex="1">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                            <Tab fx:id="disablerTab" closable="false" text="Disabler">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                                     <children>
+                                                                        <GridPane hgap="8.0" layoutX="111.0" layoutY="106.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints vgrow="ALWAYS" />
+                                                                              <RowConstraints />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TableView fx:id="disablerTableView" editable="true">
+                                                                                 <columns>
+                                                                                    <TableColumn fx:id="discheckTableColumn" prefWidth="35.0" />
+                                                                                    <TableColumn fx:id="disappTableColumn" editable="false" prefWidth="205.0" text="App name" />
+                                                                                    <TableColumn fx:id="dispackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
+                                                                                 </columns>
+                                                                              </TableView>
+                                                                              <Button fx:id="disableButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#disableButtonPressed" style="-fx-background-color: #f75575;" text="Disable !" textFill="WHITE" GridPane.rowIndex="1">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                            <Tab fx:id="enablerTab" closable="false" text="Enabler">
+                                                               <content>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                                     <children>
+                                                                        <GridPane hgap="8.0" layoutX="111.0" layoutY="106.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints vgrow="ALWAYS" />
+                                                                              <RowConstraints />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <TableView fx:id="enablerTableView" editable="true">
+                                                                                 <columns>
+                                                                                    <TableColumn fx:id="encheckTableColumn" prefWidth="35.0" />
+                                                                                    <TableColumn fx:id="enappTableColumn" editable="false" prefWidth="205.0" text="App name" />
+                                                                                    <TableColumn fx:id="enpackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
+                                                                                 </columns>
+                                                                              </TableView>
+                                                                              <Button fx:id="enableButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableButtonPressed" style="-fx-background-color: #25c161;" text="Enable !" textFill="WHITE" GridPane.rowIndex="1">
+                                                                                 <font>
+                                                                                    <Font name="System Bold" size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                            </Tab>
+                                                         </tabs>
+                                                      </TabPane>
+                                                   </left>
+                                                   <right>
+                                                      <VBox prefHeight="666.0" prefWidth="298.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <TitledPane fx:id="camera2Pane" animated="false" collapsible="false" disable="true" prefWidth="257.0" text="Camera2 API (HAL3)">
+                                                               <content>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <VBox spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <Button fx:id="enableCamera2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableCamera2ButtonPressed" text="Enable Camera2">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                              <Button fx:id="disableCamera2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#disableCamera2ButtonPressed" text="Disable Camera2">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                              <Button fx:id="enableEISButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableEISButtonPressed" text="Enable EIS">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                              <Button fx:id="disableEISButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#disableEISButtonPressed" text="Disable EIS">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="fileExplorerPane" collapsible="false" disable="true" text="File Explorer">
+                                                               <content>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <VBox layoutX="12.0" layoutY="12.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <Button fx:id="openButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openButtonPressed" text="Open">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="dpiPane" animated="false" collapsible="false" disable="true" text="Screen density">
+                                                               <content>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <VBox layoutX="12.0" layoutY="9.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <HBox spacing="8.0">
+                                                                                 <children>
+                                                                                    <Label minWidth="60.0" text="Value:">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="dpiTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </TextField>
+                                                                                    <Label minWidth="30.0" text="dpi">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <Button fx:id="applyDpiButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyDpiButtonPressed" text="Apply">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                              <Button fx:id="resetDpiButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetDpiButtonPressed" text="Reset to default">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TitledPane>
+                                                            <TitledPane fx:id="resolutionPane" animated="false" collapsible="false" disable="true" text="Screen resolution">
+                                                               <content>
+                                                                  <AnchorPane>
+                                                                     <children>
+                                                                        <VBox layoutX="12.0" layoutY="9.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <children>
+                                                                              <HBox spacing="8.0">
+                                                                                 <children>
+                                                                                    <Label minWidth="60.0" text="Width:">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="widthTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </TextField>
+                                                                                    <Label minWidth="30.0" text="px">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox spacing="8.0">
+                                                                                 <children>
+                                                                                    <Label minWidth="60.0" text="Height:">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="heightTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </TextField>
+                                                                                    <Label minWidth="30.0" text="px">
+                                                                                       <font>
+                                                                                          <Font size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <Button fx:id="applyResButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyResButtonPressed" text="Apply">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                              <Button fx:id="resetResButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetResButtonPressed" text="Reset to default">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Button>
+                                                                           </children>
+                                                                        </VBox>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </content>
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TitledPane>
+                                                         </children>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </right>
+                                                </BorderPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab id="uppertab" fx:id="fastbootTab" closable="false" text="Fastboot">
+                                       <content>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane hgap="8.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints percentWidth="70.0" />
+                                                      <ColumnConstraints percentWidth="30.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints />
+                                                      <RowConstraints />
+                                                      <RowConstraints />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <TitledPane fx:id="flasherPane" animated="false" collapsible="false" disable="true" text="Flasher" GridPane.columnSpan="2">
+                                                         <content>
+                                                            <AnchorPane>
+                                                               <children>
+                                                                  <GridPane hgap="16.0" vgap="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints percentHeight="25.0" />
+                                                                        <RowConstraints percentHeight="25.0" />
+                                                                        <RowConstraints percentHeight="12.0" />
+                                                                        <RowConstraints percentHeight="25.0" />
+                                                                        <RowConstraints percentHeight="12.0" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Button fx:id="antirbButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#antirbButtonPressed" text="Disable anti-rollback safeguard" GridPane.columnSpan="2">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <CheckBox fx:id="autobootCheckBox" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Autoboot to Recovery when it's flashed" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </CheckBox>
+                                                                        <Button fx:id="browseimageButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#browseimageButtonPressed" text="Select image" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <ComboBox fx:id="partitionComboBox" editable="true" maxWidth="1.7976931348623157E308" promptText="Partition" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Button fx:id="flashimageButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#flashimageButtonPressed" text="Flash image" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <Button fx:id="bootButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#bootButtonPressed" text="Boot to image" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <FlowPane hgap="8.0" vgap="8.0" GridPane.columnSpan="4" GridPane.rowIndex="2">
+                                                                           <children>
+                                                                              <Label text="Image:">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                              <Label fx:id="imageLabel" text="-">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                           </children>
+                                                                        </FlowPane>
+                                                                        <FlowPane hgap="8.0" vgap="8.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+                                                                           <children>
+                                                                              <Label text="ROM:">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                              <Label fx:id="romLabel" text="-">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                           </children>
+                                                                        </FlowPane>
+                                                                        <Button fx:id="browseromButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#browseromButtonPressed" text="Select ROM folder" GridPane.rowIndex="3">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <ComboBox fx:id="scriptComboBox" maxWidth="1.7976931348623157E308" promptText="Method" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Button fx:id="flashromButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#flashromButtonPressed" text="Flash ROM" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="wiperPane" animated="false" collapsible="false" disable="true" text="Wiper" GridPane.rowIndex="1">
+                                                         <content>
+                                                            <AnchorPane>
+                                                               <children>
+                                                                  <GridPane hgap="16.0" layoutX="12.0" layoutY="12.0" vgap="16.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="30.0" />
+                                                                        <ColumnConstraints percentWidth="45.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Button fx:id="cacheButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cacheButtonPressed" text="Wipe cache">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <Button fx:id="dataButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dataButtonPressed" text="Wipe userdata" textFill="RED" GridPane.columnIndex="1">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <Button fx:id="cachedataButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cachedataButtonPressed" text="Wipe cache and userdata" textFill="RED" GridPane.columnIndex="2">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="oemPane" animated="false" collapsible="false" disable="true" text="OEM Unlocker / Locker" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <content>
+                                                            <AnchorPane>
+                                                               <children>
+                                                                  <GridPane hgap="16.0" layoutX="59.0" layoutY="12.0" vgap="16.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints percentWidth="50.0" />
+                                                                        <ColumnConstraints percentWidth="50.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Button fx:id="lockButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#lockButtonPressed" text="Lock" textFill="RED" GridPane.columnIndex="1">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <Button fx:id="unlockButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#unlockButtonPressed" text="Unlock" textFill="#00c800">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TitledPane>
+                                                      <TitledPane fx:id="downloaderPane" animated="false" collapsible="false" text="ROM Downloader" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                         <content>
+                                                            <AnchorPane>
+                                                               <children>
+                                                                  <GridPane hgap="16.0" layoutX="12.800000190734863" layoutY="12.800000190734863" vgap="16.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                        <ColumnConstraints percentWidth="25.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints percentHeight="50.0" />
+                                                                        <RowConstraints percentHeight="50.0" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <TextField fx:id="codenameTextField" promptText="Codename">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ComboBox fx:id="branchComboBox" maxWidth="1.7976931348623157E308" promptText="Branch" GridPane.columnIndex="1" />
+                                                                        <Button fx:id="getlinkButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getlinkButtonPressed" text="Get link" GridPane.columnIndex="2">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <Button fx:id="downloadromButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#downloadromButtonPressed" text="Download ROM" GridPane.columnIndex="3">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <FlowPane hgap="8.0" vgap="8.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                                                           <children>
+                                                                              <Label text="Latest version:">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                              <Label fx:id="versionLabel" text="-">
+                                                                                 <font>
+                                                                                    <Font size="14.0" />
+                                                                                 </font>
+                                                                              </Label>
+                                                                           </children>
+                                                                        </FlowPane>
+                                                                        <Label fx:id="downloadProgress" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                           <font>
+                                                                              <Font size="14.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TitledPane>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </left>
+                        </BorderPane>
+                        <GridPane prefHeight="694.0" prefWidth="283.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints percentHeight="30.0" />
+                              <RowConstraints percentHeight="70.0" />
+                           </rowConstraints>
+                           <children>
+                              <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Device Details" GridPane.vgrow="ALWAYS">
+                                 <content>
+                                    <GridPane>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <TextArea fx:id="infoTextArea" editable="false">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </GridPane>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Super Status" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                 <content>
+                                    <GridPane hgap="8.0" vgap="8.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="ALWAYS" />
+                                          <ColumnConstraints />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints />
+                                          <RowConstraints vgrow="ALWAYS" />
+                                       </rowConstraints>
+                                       <children>
+                                          <MFXProgressBar fx:id="progressBar" animationSpeed="0.0" prefHeight="7.0" />
+                                          <MFXProgressSpinner fx:id="progressIndicator" prefHeight="41.0" prefWidth="35.0" GridPane.columnIndex="1" />
+                                          <TextArea fx:id="outputTextArea" editable="false" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TitledPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

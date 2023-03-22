@@ -1,0 +1,183 @@
+
+.root{
+    -fx-font-family: "Courier New";
+
+}
+
+.menu-bar {
+    -fx-background-color: #B5F1CC ;
+    -fx-background-color: linear-gradient(to right, #B5F1CC, #1dbbdd44);
+    -fx-opacity: 1;
+
+}
+.menu-bar .label {
+    -fx-font-size: 14.0 pt;
+    -fx-text-fill: black;
+
+
+}
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+    -fx-background: black ;
+    -fx-opacity: 0.5;
+    -fx-text-fill: white;
+}
+
+.menu-item {
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+    -fx-text-fill: black;
+    -fx-background: darkgray ;
+}
+.menu-item .label{
+    -fx-font-size: 14.0 pt;
+    -fx-text-fill: black;
+}
+.menu-item .label:hover{
+    -fx-font-size: 14.0 pt;
+    -fx-background: black ;
+    -fx-text-fill: white;
+}
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color:white ;
+    -fx-border-width: 0.2px;
+    -fx-border-color: black;
+    /** -fx-background-insets: 0.0, 1.0, 2.0;
+    -fx-background-radius: 0.0 6.0 6.0 6.0, 0.0 5.0 5.0 5.0, 0.0 4.0 4.0 4.0;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em;
+    -fx-opacity: 0.9;*/
+}
+
+/*
+
+.tab-pane .tab
+{
+    -fx-background-color: #abe0ff;
+      -fx-background-color:#1caab5;
+      -fx-background-color:#5b5088;
+}*/
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:400px;
+}
+.tab-pane2
+{
+    -fx-tab-min-width:130px;
+}
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab{
+
+    -fx-background-color: #FFFFFF;
+
+}
+
+.tab:selected
+{
+    -fx-background-color: #F2FEFA;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-width: 0 0 5 0;
+    -fx-border-color: #05D39B;
+
+}
+/*
+.tab-pane .tab:selected
+{
+    -fx-background-color: #015A7C;
+    -fx-background-color:#3428e0;
+    -fx-background-color:#6655af;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+*/
+
+
+
+
+/* start table view css */
+
+.table-view {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 6px 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell: hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: red;
+}
+.table-row-cell: odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell: even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+}
+.table-row-cell: highlighted {
+    -fx-background-color: #81c483;
+    -fx-background-radius: 15px;
+}
+
+
+
+/* titlepane css start */
