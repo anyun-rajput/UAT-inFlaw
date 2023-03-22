@@ -31,7 +31,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-radius: 100;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1200.0" style="-fx-background-radius: 100;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <children>
       <BorderPane prefHeight="730.0" prefWidth="1200.0" style="-fx-background-color: E5FDD1;">
          <center>
