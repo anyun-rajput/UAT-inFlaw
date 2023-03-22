@@ -436,6 +436,7 @@ class MainController : Initializable {
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
+                val link =
                     URL("https://api.github.com/repos/anyun-rajput/UAT-inFlaw/releases/latest").readText()
                         .substringAfter("\"html_url\":\"").substringBefore('"')
                 val latest = link.substringAfterLast('/')
@@ -1230,6 +1231,23 @@ class MainController : Initializable {
     private fun Minusclick(event: MouseEvent){
         ((event.source as Button).scene.window as Stage).isIconified = true
     }
+
+    private var x = 0.0
+    private var y = 0.0
+    @FXML
+    private fun borderpane_dragged(event: MouseEvent) {
+        val stage = (event.source as MenuBar).scene.window as Stage
+        stage.y = event.screenY - y
+        stage.x = event.screenX - x
+    }
+
+    @FXML
+    private fun borderpane_pressed(event: MouseEvent) {
+        x = event.sceneX
+        y = event.sceneY
+    }
+
+
     @FXML
     private fun aboutMenuItemPressed(event: ActionEvent) {
         Alert(AlertType.INFORMATION).apply {
