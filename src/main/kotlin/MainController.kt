@@ -436,7 +436,31 @@ class MainController : Initializable {
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
-// add update data
+                    URL("https://api.github.com/repos/anyun-rajput/UAT-inFlaw/releases/latest").readText()
+                        .substringAfter("\"html_url\":\"").substringBefore('"')
+                val latest = link.substringAfterLast('/')
+                if (latest > UAT.version)
+                    withContext(Dispatchers.Main) {
+                        val vb = VBox()
+                        val download = Hyperlink("Download")
+                        Alert(AlertType.INFORMATION).apply {
+                            initStyle(StageStyle.UTILITY)
+                            title = "New version available!"
+                            graphic = ImageView("mitu.png")
+                            headerText =
+                                "Version $latest is available!"
+                            vb.alignment = Pos.CENTER
+                            download.onAction = EventHandler {
+                                if (UAT.linux)
+                                    Runtime.getRuntime().exec("xdg-open $link")
+                                else Desktop.getDesktop().browse(URI(link))
+                            }
+                            download.font = Font(15.0)
+                            vb.children.add(download)
+                            dialogPane.content = vb
+                            showAndWait()
+                        }
+                    }
             } catch (ex: Exception) {
                 // OK
             }
