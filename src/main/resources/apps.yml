@@ -130,3 +130,316 @@ com.xiaomi.simactivate.service: Xiaomi SIM Activate Service
 com.xiaomi.vipaccount: Xiaomi VIP Account
 com.xiaomi.xmsf: Xiaomi Service Framework
 com.xiaomi.xmsfkeeper: Xiaomi Service Framework
+samsung.android.bixby.wakeup: Bixby Wakeup
+samsung.android.app.spage: Bixby homepage launcher
+samsung.android.app.routines: Bixby Routines
+samsung.android.bixby.service: Bixby features
+samsung.android.visionintelligence: Bixby Vision
+samsung.android.bixby.agent: Bixby Voice
+samsung.android.bixby.agent.dummy: Bixby debug app
+samsung.android.bixbyvision.framework: Bixby Vision
+samsung.android.messaging: Message app
+sec.android.easyonehand: One hand mode
+samsung.android.drivelink.stub: Samsung Car Mode
+sec.android.widgetapp.samsungapps: Homescreen widget
+sec.android.app.sbrowser: Samsung Internet
+samsung.android.mateagent: Galaxy Friends
+sec.android.easyMover.Agent: Samsung Smart Switch
+samsung.android.app.watchmanagerstub: Galaxy Watch
+sec.android.daemonapp: Samsung Weather
+samsung.android.app.social: Whats New
+samsung.ecomm.global: Samsung Shop
+sec.android.app.voicenote: Voice Recorder
+samsung.android.oneconnect: Smart Things
+samsung.android.voc: Samsung Members
+sec.android.app.popupcalculator: Samsung Calculator
+sec.android.splitsound: Samsung Split Sound Service
+mobeam.barcodeService: Barcode scanner
+samsung.android.app.dressroom: Samsung Wallpapers
+samsung.android.scloud: Samsung Cloud
+samsung.android.sdk.handwriting: Galaxy Note series bloat
+samsung.android.sdk.professionalaudio.utility.jammonitor: Sdk Utility
+samsung.android.universalswitch: Mobile Universal Switch
+samsung.android.visioncloudagent: VisionCloudAgent
+samsung.android.visionintelligence: Bixby Vision
+samsung.android.widgetapp.yahooedge.finance: Finance widget
+samsung.android.widgetapp.yahooedge.sport: Sports widget
+samsung.app.highlightplayer: Samsung Story Video Editor
+samsung.safetyinformation: Saftey Information
+samsung.storyservice: Samsung StoryService (Tracks device activity)
+samsung.android.service.aircommand: Air command (Note series bloat)
+samsung.android.app.aodservice: Always on Display
+sec.android.app.dexonpc: Samsung Dex
+samsung.android.ardrawing: AR Doodle
+samsung.android.svoiceime: Samsung Voice Input
+samsung.android.beaconmanager: User tracking app (sensitive)
+samsung.android.email.provider: Samsung Email
+wsomacp: Samsung Email
+samsung.android.samsungpassautofill: Samsung Auto fill
+samsung.android.authfw: Samsung Authentication
+samsung.android.samsungpass: Samsung Pass
+samsung.android.spay: Samsung Pay (sensitive)
+samsung.android.spayfw: Samsung Pay Framework (sensitive)
+boxer.app: Flipboard app
+samsung.android.wellbeing: Digital wellbeing
+samsung.android.da.daagent: Dual Messenger
+samsung.android.service.livedrawing: Live Message (Note series bloat)
+samsung.android.aremoji: AR Emoji
+sec.android.mimage.avatarstickers: Stickers for AR Emoji app
+samsung.android.emojiupdater: Emoji updater
+samsung.android.aremoji: AR Emoji
+sec.android.mimage.avatarstickers: Stickers for AR Emoji app
+samsung.android.emojiupdater: Emoji updater
+samsung.android.app.camera.sticker.facearavatar.preload: Camera stickers
+sec.android.app.kidshome: Kids Home launcher
+samsung.android.game.gametools: samsung game
+samsung.android.game.gos: samsung game
+samsung.android.gametuner.thin: samsung game
+samsung.android.app.ledbackcover: samsung game
+sec.android.cover.ledcover: samsung game
+vcast.mediamanager: Verizon Cloud
+vzw.hss.myverizon: My Verizon
+asurion.android.verizon.vms: Digital Secure
+motricity.verizon.ssodownloadable: Verizon Login
+vzw.hs.android.modlite: Verizon Tones
+samsung.vvm: Visual Voicemail
+att.dh: Device Help
+att.dtv.shaderemote: DIRECTV Remote App
+att.tv: AT&T TV
+samsung.attvvm: Samsung AT&T Visual Voicemail
+att.myWireless: myAT&T
+asurion.android.protech.att: AT&T ProTech
+att.android.attsmartwifi: AT&T Smart Wi-Fi
+android.bips: Default Printing Service
+android.bookmarkprovider: Bookmark Provider
+android.browser: Web Browser
+android.calendar: Calendar app
+android.cellbroadcastreceiver: Cell broadcasting
+android.chrome: Chrome Browser
+android.deskclock: Stock Clock app
+android.dreams.basic: Screensaver app
+android.dreams.phototable: Screensaver app
+android.egg: Android Easter Egg
+android.emergency: SOS Calling
+android.hotwordenrollment.okgoogle: OK Google
+android.mms: MMS app
+android.mms.service: MMS
+android.printspooler: Printing service
+android.statementservice: Checks APK files
+android.stk: SIM Tool-kit
+android.wallpaper.livepicker: Live wallpaper
+android.wallpaperbackup: Wallpaper backup feature
+android.wallpapercropper: Wallpaper cropping feature
+android.vpndialogs: VPN Dialog
+facebook.katana: Facebook
+facebook.system: Facebook
+facebook.appmanager: Facebook
+facebook.services: Facebook
+google.android.apps.docs: Google Docs
+google.android.apps.maps: Google Maps
+google.android.apps.photos: Google Photos
+google.android.apps.tachyon: Google Duo
+google.android.apps.wellbeing: Digital Wellbeing
+google.android.feedback: Feedback app
+google.android.gm: Gmail
+google.android.googlequicksearchbox: Google Quick Search
+google.android.inputmethod.latin: Gboard
+google.android.marvin.talkback: Talkback feature
+google.android.music: Google Play Music
+google.android.printservice.recommendation: Mobile Printing
+google.android.syncadapters.calendar: Calendar Sync
+google.android.tts: Text-to-speech
+google.android.videos: Google Play Movies & TV
+google.android.youtube: Youtube
+google.ar.lens: AR Lens
+samsung.android.service.peoplestripe: Edge panel plugin for contacts
+samsung.android.app.sbrowseredge: Edge panel plugin for Samsung Internet
+samsung.android.app.appsedge: App panel plugin for Edge display 
+android.documentsui: Documnet
+samsung.android.app.contacts: Contacts
+samsung.android.calendar: calender
+cnn.mobile.android.phone: CNN Mobile
+bleacherreport.android.teamstream: Bleacher Report
+audible.application: Audible
+microsoft.skydrive: Microsoft OneDrive
+com.android.bbkcalculator: Calculator app
+com.android.BBKClock: Clock app
+com.android.bbklog: Log Collection
+com.android.bbkmusic: i Music
+com.android.bbksoundrecorder: Sound Recorder
+com.bbk.account: Vivo account
+com.bbk.calendar: Vivo Calendar
+com.bbk.cloud: Vivo Cloud
+com.bbk.photoframewidget: Photo widget
+com.bbk.scene.indoor: My House app
+com.bbk.SuperPowerSave: Powersaver
+com.bbk.theme: i Theme
+com.bbk.theme.resources: Theme Store
+com.baidu.duersdk.opensdk: ViVoice
+com.baidu.input_vivo: Chinese keyboard
+com.google.android.apps.docs: Google Drive
+com.google.android.apps.maps: Google Maps
+com.google.android.apps.photos: Google Photos
+com.google.android.apps.tachyon: Google Duo
+com.google.android.feedback: Google feedback
+com.google.android.gm: Gmail
+com.google.android.googlequicksearchbox: Google search widget
+com.google.android.marvin.talkback: Talkback
+com.google.android.music: Google Play Music
+com.google.android.printservice.recommendation: Mobile Printing
+com.google.android.syncadapters.calendar: Calender sync
+com.google.android.syncadapters.contacts: Contacts sync
+com.google.android.tts: Text-to-speech
+com.google.android.videos: Google Play Moviews & TV
+com.google.android.youtube: YouTube
+com.google.ar.lens: Google Lens
+com.ibimuyu.lockscreen: Glance Lockfeed
+com.iqoo.engineermode: Vivo Engineering Mode
+com.iqoo.secure: Vivo i Manager
+com.vivo.appstore: Vivo App Store
+com.vivo.assistant: Jovi Smart Scene
+com.vivo.browser: Vivo Wen Browser
+com.vivo.collage: Photo collage maker
+com.vivo.compass: Stock Compass app
+com.vivo.doubleinstance: App Clone
+com.vivo.doubletimezoneclock: Timezone widget
+com.vivo.dream.clock: Screensaver clock
+com.vivo.dream.music: Screensaver music
+com.vivo.dream.weather: Screensaver weather
+com.vivo.easyshare: Easy Share
+com.vivo.email: Email app (not Gmail)
+com.vivo.FMRadio: FM app
+com.vivo.gallery: Gallery apps
+com.vivo.globalsearch: Vivo global search
+com.vivo.vivokaraoke: Movile KTV
+com.vivo.magazine: Lockscreen Magazine
+com.vivo.motormode: Motor Mode
+com.vivo.carmode: Driving Mode (old phones)
+com.vivo.translator: Translator app
+com.vivo.unionpay: Vivo Pay
+com.vivo.video.floating: Video floating widget
+com.vivo.videoeditor: Video editor
+com.vivo.weather: Weather app
+com.vivo.weather.provider: Weather client app
+com.vivo.website: Opens Vivo website
+com.vivo.widget.calendar: Calendar widget
+com.vlife.vivo.wallpaper: Vivo live wallpaper
+com.kikaoem.vivo.qisiemoji.inputmethod: Emoji for stock keyboard
+com.coloros.alarmclock: Alarm app
+com.coloros.assistantscreen: Smart Assistant
+com.coloros.backuprestore: Clone Phone
+com.coloros.backuprestore.remoteservice: Backup and Restore
+com.coloros.calculator: Calculator
+com.coloros.childrenspace: Kid Space
+com.coloros.cloud: Oppo Cloud
+com.coloros.compass2: Compass
+com.coloros.filemanager: File Manager
+com.coloros.floatassistant: Floating app window
+com.coloros.focusmode: Focus Mode
+com.coloros.gallery3d: Gallery app
+com.coloros.gamespace: Game Center
+com.coloros.healthcheck: Quick Check
+com.coloros.healthservice: Device Health Check
+com.coloros.musiclink: Music Party
+com.coloros.safesdkproxy: Phone Cleaner & Antivirus (spyware)
+com.coloros.screenrecorder: Screen Recorder
+com.coloros.securepay: Secure Pay
+com.coloros.smartsidebar: Smart Sidebar
+com.coloros.speechassist: Chinese bloat
+com.coloros.soundrecorder: Voice Recorder
+com.coloros.translate.engine: Translation app
+com.coloros.video: Video Player
+com.coloros.wallpapers: Wallpaper selector
+com.coloros.weather.service: Color OS Weather app
+com.coloros.widget.smallweather: Weather widget
+com.google.android.apps.googleassistant: Google Assistant
+com.google.android.apps.maps: Google Maps
+com.google.android.apps.messaging: Messages
+com.google.android.apps.nbu.files: Files by Google
+com.google.android.apps.nbu.paisa.user: Google Pay
+com.google.android.apps.photos: Google Photos
+com.google.android.apps.wellbeing: Digital Wellbeing
+com.google.android.calendar: Calendar
+com.google.android.documentsui: Files 9
+com.google.android.feedback: Google Feedback
+com.google.android.gm: Gmail
+com.google.android.googlequicksearchbox: Search Widget
+com.google.android.inputmethod.latin: Gboard
+com.google.android.keep: Google Keep
+com.google.android.marvin.talkback: Android  Talkback
+com.google.android.projection.gearhead: Android Auto
+com.google.android.tag: Tags
+com.google.android.tts: Text-to-Speech service
+com.google.android.webview: Android Webview
+com.google.android.youtube: YouTube
+com.google.ar.core: AR Core
+com.google.ar.lens: Google Lens
+com.heytap.browser: Stock web browser
+com.heytap.cloud: HeyTap Cloud
+com.heytap.themestore: Theme Store
+com.facebook.appmanager: Facebook
+com.facebook.services: Facebook
+com.facebook.system: Facebook
+com.nearme.atlas: Secure Payment
+com.netflix.mediaclient: Netflix
+com.netflix.partner.activation: Netflix
+com.opera.preinstall: Opera browser
+com.redteamobile.roaming: ORoaming
+com.redteamobile.roaming.deamon: ORoaming
+com.tencent.soter.soterserver: Chinese bloat
+com.oppo.market: Oppo App Market
+com.app.market: Oppo App Market
+com.oppo.music: Music app
+com.oppo.operationmanual: User Guide
+com.oppo.partnerbrowsercustomizations: Browser bookmarks
+com.oppo.quicksearchbox: Search widget
+com.oppo.tzupdate: Calibrate Time Zone
+com.oppo.usercenter: OPPO Account Services
+se.dirac.acs: Dirac Control Service (sensitive)
+com.caf.fmradio: FM Radio app
+com.coloros.activation.overlay.common: coloros activation
+com.coloros.appmanager: App Manager
+com.coloros.assistantscreen: Smart Assistant
+com.coloros.calculator: Calculator
+com.coloros.childrenspace: Kids Space
+com.coloros.compass2: Compass
+com.coloros.filemanager: File Manager
+com.coloros.floatassistant: Color OS Floating button
+com.coloros.focusmode: Focus Mode
+com.coloros.gamespace: Game Space
+coloros.gamespaceui: Game Space
+com.coloros.healthcheck: Device Health
+com.coloros.oshare: Oppo Share
+com.coloros.safesdkproxy: Phone Cleaner & Antivirus (spyware)
+com.coloros.screenrecorder: Screen Recorder app
+com.coloros.soundrecorder: Voice Recorder
+com.coloros.weather2: Weather
+com.coloros.weather.service: Weather
+com.coloros.widget.smallweather: Weather widget
+com.dsi.ant.server: ANT HAL Service
+com.google.android.apps.docs: Google Drive
+com.google.android.apps.magazines: Google Magazines
+com.google.android.apps.maps: Google Maps
+com.google.android.apps.photos: Google Photos
+com.google.android.apps.tachyon: Google Duo
+com.google.android.apps.wellbeing: Digital Wellbeing
+com.google.android.apps.youtube.music: Youtube Music
+com.google.android.calendar: Google Calendar
+com.google.android.gm: Gmail
+com.google.android.googlequicksearchbox: Google Search Widget
+com.google.android.inputmethod.latin: Gboard
+com.google.android.keep: Google Keep
+com.google.android.marvin.talkback: Talkback
+com.google.android.tts: Text-to-speech
+com.google.android.youtube: YouTube
+com.heytap.browser: Stock Browser
+com.heytap.cloud: HeyTap Cloud
+com.heytap.market: App Market
+com.heytap.mcs: System Messages
+com.oppo.market: Realme App Market
+com.oppo.music: Oppo Music
+com.oppo.sos: Emergency call app
+com.nearme.browser: ColorOS’s Browser
+com.nearme.gamecenter: Game Center
+com.redteamobile.roaming: ORoaming
+com.redteamobile.roaming.deamon: ORoaming
