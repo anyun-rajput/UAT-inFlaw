@@ -1,3 +1,41 @@
+com.samsung.android.aremoji: AR Emoji
+com.samsung.android.aremojieditor: AR Emoji Editor
+com.sec.android.mimage.avatarstickers: AR Emoji Stickers
+com.samsung.android.arzone: AR Zone (Main app)
+com.samsung.android.service.livedrawing: Live Message
+com.samsung.android.app.camera.sticker.facearavatar.preload: Camera stickers
+com.samsung.android.app.spage: Bixby Home / Samsung Free
+com.samsung.android.bixby.agent: Bixby Voice
+com.samsung.android.bixby.wakeup: Bixby Voice Wakeup
+com.samsung.android.bixby.service: Bixby Service
+com.samsung.android.visionintelligence: Bixby Vision
+com.sec.android.app.sbrowser: Samsung Internet
+com.samsung.android.app.notes: Samsung Notes
+com.samsung.android.app.calendar: Samsung Calendar
+com.samsung.android.messaging: Samsung Messages
+com.samsung.android.samsungpass: Samsung Pass
+com.samsung.android.spayfw: Samsung Pay/Wallet Framework
+com.samsung.android.app.tips: Samsung Tips
+com.samsung.android.tvplus: Samsung TV Plus
+com.samsung.android.app.omcagent: Samsung Device Configuration
+com.samsung.android.wellbeing: Digital Wellbeing (Samsung)
+com.sec.android.app.kidshome: Kids Home
+com.samsung.android.game.gamehome: Game Launcher
+com.samsung.android.game.gametools: Game Booster
+com.samsung.android.game.gos: Game Optimizing Service
+com.facebook.katana: Facebook
+com.facebook.system: Facebook App Installer
+com.facebook.appmanager: Facebook App Manager
+com.facebook.services: Facebook Services
+com.microsoft.skydrive: Microsoft OneDrive
+com.netflix.partner.activation: Netflix (stub)
+com.spotify.music: Spotify (stub)
+com.samsung.android.da.daagent: Dual Messenger
+com.samsung.android.mdx.quickboard: Link to Windows Service
+com.sec.android.easyonehand: One-Handed Operation
+com.samsung.android.app.appsedge: Edge Panels
+com.samsung.android.service.peoplestripe: People Edge Panel
+com.android.printspooler: System Print Service
 com.amazon.appmanager: Mobile Device Information Provider
 com.android.browser: Browser
 com.android.calendar: Calendar
