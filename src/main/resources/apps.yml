@@ -481,3 +481,35 @@ com.nearme.browser: ColorOS’s Browser
 com.nearme.gamecenter: Game Center
 com.redteamobile.roaming: ORoaming
 com.redteamobile.roaming.deamon: ORoaming
+com.samsung.android.aremoji: AR Emoji
+com.samsung.android.arzone: AR Zone
+com.samsung.android.app.notes: Samsung Notes
+com.samsung.android.app.routines: Bixby Routines
+com.samsung.android.app.spage: Samsung Free / Bixby Home
+com.samsung.android.bixby.agent: Bixby Voice
+com.samsung.android.bixby.wakeup: Bixby Wakeup
+com.samsung.android.bixby.vision: Bixby Vision
+com.samsung.android.email.provider: Samsung Email
+com.samsung.android.game.gamehome: Game Launcher
+com.samsung.android.game.gos: Game Optimizing Service (GOS)
+com.samsung.android.kidsinstaller: Samsung Kids Installer
+com.samsung.android.mateagent: Samsung Galaxy Friends
+com.samsung.android.samsungpass: Samsung Pass
+com.samsung.android.spay: Samsung Pay
+com.samsung.android.themestore: Galaxy Themes
+com.samsung.android.visionintelligence: Bixby Vision (system component)
+com.samsung.android.voc: Samsung Members
+com.sec.android.app.billing: Samsung Checkout
+com.sec.android.app.kidshome: Samsung Kids
+com.sec.android.app.samsungapps: Galaxy Store
+com.sec.android.app.sbrowser: Samsung Internet Browser
+com.sec.android.app.shealth: Samsung Health
+com.sec.android.daemonapp: Samsung Weather
+com.sec.android.easyMover: Samsung Smart Switch
+com.facebook.appmanager: Facebook App Manager
+com.facebook.katana: Facebook
+com.facebook.services: Facebook Services
+com.facebook.system: Facebook App Installer
+com.microsoft.appmanager: Microsoft Your Phone Companion
+com.microsoft.office.officehubrow: Microsoft Office
+com.microsoft.skydrive: Microsoft OneDrive
